@@ -6,3 +6,4 @@ class Product(models.Model):
     price = models.IntegerField()
     description = models.TextField()
     quantity = models.IntegerField()
+    is_valid = models.BooleanField(null=True,blank=True,)
