@@ -7,3 +7,8 @@ class Product(models.Model):
     description = models.TextField()
     quantity = models.IntegerField()
     is_valid = models.BooleanField(null=True,blank=True,)
+class Review(models.Model):
+    'Generated Model'
+    title = models.CharField(max_length=255,)
+    body = models.TextField()
+    points = models.IntegerField()
