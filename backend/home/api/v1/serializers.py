@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Product,Review
+from home.models import AlbumInventory,Product,Review
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -86,4 +86,10 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Review
+        fields = "__all__"
+
+class AlbumInventorySerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = AlbumInventory
         fields = "__all__"

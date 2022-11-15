@@ -12,3 +12,6 @@ class Review(models.Model):
     title = models.CharField(max_length=255,)
     body = models.TextField()
     points = models.IntegerField()
+class AlbumInventory(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=256,)
