@@ -15,3 +15,4 @@ class Review(models.Model):
 class AlbumInventory(models.Model):
     'Generated Model'
     name = models.CharField(max_length=256,)
+    number_of_tracks = models.BigIntegerField(null=True,blank=True,)
