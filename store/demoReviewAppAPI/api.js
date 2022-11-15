@@ -9,6 +9,24 @@ function rest_auth_login_create(payload) {
 function api_v1_signup_create(payload) {
   return demoReviewAppAPI.post(`/api/v1/signup/`, payload.data)
 }
+function api_v1_albuminventory_partial_update(payload) {
+  return demoReviewAppAPI.patch(
+    `/api/v1/albuminventory/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_albuminventory_read(payload) {
+  return demoReviewAppAPI.get(`/api/v1/albuminventory/${payload.id}/`)
+}
+function api_v1_albuminventory_delete(payload) {
+  return demoReviewAppAPI.delete(`/api/v1/albuminventory/${payload.id}/`)
+}
+function api_v1_albuminventory_update(payload) {
+  return demoReviewAppAPI.put(
+    `/api/v1/albuminventory/${payload.id}/`,
+    payload.data
+  )
+}
 function rest_auth_password_reset_create(payload) {
   return demoReviewAppAPI.post(`/rest-auth/password/reset/`, payload.data)
 }
@@ -60,6 +78,12 @@ function rest_auth_user_read(payload) {
 function rest_auth_user_update(payload) {
   return demoReviewAppAPI.put(`/rest-auth/user/`, payload.data)
 }
+function api_v1_albuminventory_create(payload) {
+  return demoReviewAppAPI.post(`/api/v1/albuminventory/`, payload.data)
+}
+function api_v1_albuminventory_list(payload) {
+  return demoReviewAppAPI.get(`/api/v1/albuminventory/`)
+}
 function api_v1_review_partial_update(payload) {
   return demoReviewAppAPI.patch(`/api/v1/review/${payload.id}/`, payload.data)
 }
@@ -87,6 +111,10 @@ function api_v1_review_list(payload) {
 export const apiService = {
   rest_auth_login_create,
   api_v1_signup_create,
+  api_v1_albuminventory_partial_update,
+  api_v1_albuminventory_read,
+  api_v1_albuminventory_delete,
+  api_v1_albuminventory_update,
   rest_auth_password_reset_create,
   rest_auth_registration_create,
   api_v1_product_create,
@@ -103,6 +131,8 @@ export const apiService = {
   rest_auth_user_partial_update,
   rest_auth_user_read,
   rest_auth_user_update,
+  api_v1_albuminventory_create,
+  api_v1_albuminventory_list,
   api_v1_review_partial_update,
   api_v1_review_read,
   api_v1_review_delete,
