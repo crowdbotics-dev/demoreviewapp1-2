@@ -1,4 +1,4 @@
-from .models import Product, Review
+from .models import Review, AlbumInventory, Product
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 

@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import AlbumInventory,Product,Review
-from .serializers import AlbumInventorySerializer,ProductSerializer,ReviewSerializer
+from home.models import AlbumInventory,NEWmodule,Product,Review
+from .serializers import AlbumInventorySerializer,NEWmoduleSerializer,ProductSerializer,ReviewSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class AlbumInventoryViewSet(viewsets.ModelViewSet):
     serializer_class = AlbumInventorySerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = AlbumInventory.objects.all()
+
+class NEWmoduleViewSet(viewsets.ModelViewSet):
+    serializer_class = NEWmoduleSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = NEWmodule.objects.all()

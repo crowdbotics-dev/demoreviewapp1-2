@@ -16,3 +16,6 @@ class AlbumInventory(models.Model):
     'Generated Model'
     name = models.CharField(max_length=256,)
     number_of_tracks = models.BigIntegerField(null=True,blank=True,)
+class NEWmodule(models.Model):
+    'Generated Model'
+    app = models.GenericIPAddressField(protocol="both",unpack_ipv4=False,)
