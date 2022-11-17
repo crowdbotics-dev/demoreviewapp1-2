@@ -3,6 +3,27 @@ const demoReviewAppAPI = axios.create({
   baseURL: "https://demoreviewapp1-2-prod.herokuapp.com",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function api_v1_newmodule_create(payload) {
+  return demoReviewAppAPI.post(`/api/v1/newmodule/`, payload.data)
+}
+function api_v1_newmodule_list(payload) {
+  return demoReviewAppAPI.get(`/api/v1/newmodule/`)
+}
+function api_v1_newmodule_partial_update(payload) {
+  return demoReviewAppAPI.patch(
+    `/api/v1/newmodule/${payload.id}/`,
+    payload.data
+  )
+}
+function api_v1_newmodule_read(payload) {
+  return demoReviewAppAPI.get(`/api/v1/newmodule/${payload.id}/`)
+}
+function api_v1_newmodule_delete(payload) {
+  return demoReviewAppAPI.delete(`/api/v1/newmodule/${payload.id}/`)
+}
+function api_v1_newmodule_update(payload) {
+  return demoReviewAppAPI.put(`/api/v1/newmodule/${payload.id}/`, payload.data)
+}
 function rest_auth_login_create(payload) {
   return demoReviewAppAPI.post(`/rest-auth/login/`, payload.data)
 }
@@ -109,6 +130,12 @@ function api_v1_review_list(payload) {
   return demoReviewAppAPI.get(`/api/v1/review/`)
 }
 export const apiService = {
+  api_v1_newmodule_create,
+  api_v1_newmodule_list,
+  api_v1_newmodule_partial_update,
+  api_v1_newmodule_read,
+  api_v1_newmodule_delete,
+  api_v1_newmodule_update,
   rest_auth_login_create,
   api_v1_signup_create,
   api_v1_albuminventory_partial_update,
